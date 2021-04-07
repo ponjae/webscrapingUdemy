@@ -36,6 +36,8 @@ def sort_stories(hnlist):
     return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
 
 
-(mega_links, mega_subtext) = nbr_pages(2)
+wanted_pages = int(input('How many pages do you want to search ( > 0): '))
+
+(mega_links, mega_subtext) = nbr_pages(wanted_pages)
 
 pprint.pprint(create_custom_hn(mega_links, mega_subtext))
